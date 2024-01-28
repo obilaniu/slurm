@@ -2020,6 +2020,15 @@ force "libpmix" usage.
 .IP
 
 .TP
+.B torchrun
+To enable PyTorch distributed support. This is for applications making use of
+the \fBtorchrun\fR / \fBtorch.distributed.run\fR tools and/or the function
+\fBtorch.distributed.init_process_group(backend, "env://")\fR.
+This plugin does not have support for heterogeneous or elastic jobs.
+Support for torchrun is included by default.
+.IP
+
+.TP
 .B none
 No special MPI processing. This is the default and works with
 many other versions of MPI.
